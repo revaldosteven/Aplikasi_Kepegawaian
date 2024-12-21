@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Kelas;
 
 import java.sql.Connection;
@@ -193,7 +189,7 @@ public class Bagian {
             rs.close();
             st.close();
         } catch (SQLException sQLException) {
-            JOptionPane.showMessageDialog(null, "Data gagal ditampilkan: " + sQLException.getMessage(),
+            JOptionPane.showMessageDialog(null, "Data Gagal Ditampilkan: " + sQLException.getMessage(),
                     "Error", JOptionPane.ERROR_MESSAGE);
         }
 

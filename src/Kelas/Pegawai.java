@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Kelas;
 
 import java.sql.Connection;
@@ -168,7 +164,7 @@ public class Pegawai {
             rs = st.executeQuery(query);
             System.out.println("tampil");
         } catch (SQLException sQLException) {
-            JOptionPane.showMessageDialog(null, "Pegawai Gagal Ditampilkan");
+            JOptionPane.showMessageDialog(null, "Data Gagal Ditampilkan");
             System.out.println(sQLException);
         }
 
@@ -185,15 +181,14 @@ public class Pegawai {
 
             ps.executeUpdate();
             ps.close();
-            JOptionPane.showMessageDialog(null, "Pegawai Berhasil Di Hapus");
+            JOptionPane.showMessageDialog(null, "Data Berhasil Di Hapus");
 
         } catch (SQLException sQLException) {
-            JOptionPane.showMessageDialog(null, "Pegawai Gagal Di Hapus");
+            JOptionPane.showMessageDialog(null, "Data Gagal Di Hapus");
         }
     }
     
     public void ubahPegawai() {
-
         query = "UPDATE pegawai "
                 + "SET nama = ?, "
                 + "id_kategori = ?, "
@@ -265,7 +260,7 @@ public class Pegawai {
             rs.close();
             st.close();
         } catch (SQLException sQLException) {
-            JOptionPane.showMessageDialog(null, "Data gagal ditampilkan: " + sQLException.getMessage(),
+            JOptionPane.showMessageDialog(null, "Data Gagal Ditampilkan: " + sQLException.getMessage(),
                     "Error", JOptionPane.ERROR_MESSAGE);
         }
 

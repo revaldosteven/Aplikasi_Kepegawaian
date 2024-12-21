@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package PopUp;
 
 import Kelas.Pegawai;
@@ -25,9 +21,6 @@ import com.formdev.flatlaf.util.StringUtils;
  */
 public class PopUpPegawai extends javax.swing.JFrame {
 
-    /**
-     * Creates new form PopUpPegawai
-     */
     public PopUpPegawai() {
         initComponents();
         comboBoxBagian();
@@ -272,6 +265,12 @@ public class PopUpPegawai extends javax.swing.JFrame {
             }
         });
 
+        cbBagian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbBagianActionPerformed(evt);
+            }
+        });
+
         cbJK.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Laki-laki", "Perempuan" }));
 
         btnTambah.setText("Tambah");
@@ -497,6 +496,12 @@ public class PopUpPegawai extends javax.swing.JFrame {
         }
 
         reset();
+        
+        MainMenu.pn_utama.removeAll();
+        MainMenu.pn_utama.add(new MenuPegawai());
+        MainMenu.pn_utama.repaint();
+        MainMenu.pn_utama.revalidate();
+        dispose();
     }//GEN-LAST:event_btnUbahActionPerformed
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
@@ -510,19 +515,78 @@ public class PopUpPegawai extends javax.swing.JFrame {
 
         loadTable();
         reset();
+        
+        MainMenu.pn_utama.removeAll();
+        MainMenu.pn_utama.add(new MenuPegawai());
+        MainMenu.pn_utama.repaint();
+        MainMenu.pn_utama.revalidate();
+        dispose();
     }//GEN-LAST:event_btnHapusActionPerformed
 
     private void cbKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbKategoriActionPerformed
         // Mendapatkan item yang dipilih dari combo box
-    String selectedCategory = (String) cbKategori.getSelectedItem();
+//    String selectedCategory = (String) cbKategori.getSelectedItem();
+//
+//    // Cek apakah kategori yang dipilih adalah "Tenaga Kependidikan"
+//    if ("Tenaga Kependidikan".equals(selectedCategory)) {
+//        txtNIDN.setVisible(false); // Menyembunyikan txtNIDN
+//    } else {
+//        txtNIDN.setVisible(true); // Menampilkan txtNIDN
+//    }
+        String selectedCategory = (String) cbKategori.getSelectedItem();
 
-    // Cek apakah kategori yang dipilih adalah "Tenaga Kependidikan"
-    if ("Tenaga Kependidikan".equals(selectedCategory)) {
-        txtNIDN.setVisible(false); // Menyembunyikan txtNIDN
-    } else {
-        txtNIDN.setVisible(true); // Menampilkan txtNIDN
-    }
+        // Clear existing items in cbBagian and cbJabatan
+        cbBagian.removeAllItems();
+        cbJabatan.removeAllItems();
+
+        if ("Tenaga Pendidik".equals(selectedCategory)) {
+            // Add items to cbBagian for Tenaga Pendidik
+            cbBagian.addItem("Sistem Informasi");
+            cbBagian.addItem("Teknik Industri");
+            cbBagian.addItem("Pendidikan Teknologi Informasi");
+            cbBagian.addItem("Program Studi");
+
+            // Add items to cbJabatan for Tenaga Pendidik
+            cbJabatan.addItem("Rektor");
+            cbJabatan.addItem("Wakil Rektor 1");
+            cbJabatan.addItem("Wakil Rektor 2");
+            cbJabatan.addItem("Wakil Rektor 3");
+            cbJabatan.addItem("Kaprodi Sistem Informasi");
+            cbJabatan.addItem("Kaprodi Pendidikan Teknologi Informasi");
+            cbJabatan.addItem("Kaprodi Teknik Industri");
+            cbJabatan.addItem("Tidak Ada Jabatan");
+
+            txtNIDN.setVisible(true); // Show txtNIDN
+        } else if ("Tenaga Kependidikan".equals(selectedCategory)) {
+            // Add items to cbBagian for Tenaga Kependidikan
+            cbBagian.addItem("LPPM");
+            cbBagian.addItem("BAK");
+            cbBagian.addItem("BAU");
+
+            txtNIDN.setVisible(false); // Hide txtNIDN
+        }
     }//GEN-LAST:event_cbKategoriActionPerformed
+
+    private void cbBagianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbBagianActionPerformed
+        String selectedBagian = (String) cbBagian.getSelectedItem();
+
+        // Clear existing items in cbJabatan
+        cbJabatan.removeAllItems();
+
+        if ("LPPM".equals(selectedBagian)) {
+            // Add items to cbJabatan for LPPM
+            cbJabatan.addItem("Ketua LPPM");
+            cbJabatan.addItem("Wakil Ketua LPPM");
+            cbJabatan.addItem("Kepala Divisi Penilitian");
+            cbJabatan.addItem("Kepala Divisi Pengabdian Masyarakat");
+        } else if ("BAK".equals(selectedBagian)) {
+            // Add items to cbJabatan for BAK
+            cbJabatan.addItem("Kepala BAK");
+        } else if ("BAU".equals(selectedBagian)) {
+            // Add items to cbJabatan for BAU
+            cbJabatan.addItem("Kepala BAU");
+        }
+    }//GEN-LAST:event_cbBagianActionPerformed
 
     /**
      * @param args the command line arguments

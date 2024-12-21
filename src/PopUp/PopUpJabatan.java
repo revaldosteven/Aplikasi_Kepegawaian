@@ -221,6 +221,12 @@ public class PopUpJabatan extends javax.swing.JFrame {
 
         loadTable();
         reset();
+        
+        MainMenu.pn_utama.removeAll();
+        MainMenu.pn_utama.add(new MenuJabatan());
+        MainMenu.pn_utama.repaint();
+        MainMenu.pn_utama.revalidate();
+        dispose();
     }//GEN-LAST:event_btnUbahActionPerformed
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
@@ -234,6 +240,12 @@ public class PopUpJabatan extends javax.swing.JFrame {
 
         loadTable();
         reset();
+        
+        MainMenu.pn_utama.removeAll();
+        MainMenu.pn_utama.add(new MenuJabatan());
+        MainMenu.pn_utama.repaint();
+        MainMenu.pn_utama.revalidate();
+        dispose();
     }//GEN-LAST:event_btnHapusActionPerformed
 
     /**

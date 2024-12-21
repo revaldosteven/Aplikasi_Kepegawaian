@@ -1,10 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package View;
 
-//import PopUp.PopUpDivisi;
 import Kelas.Kategori;
 import PopUp.PopUpJabatan;
 import PopUp.PopUpKategori;
@@ -19,9 +14,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class MenuKategori extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Jabatan
-     */
     public MenuKategori() {
         initComponents();
         loadTable();

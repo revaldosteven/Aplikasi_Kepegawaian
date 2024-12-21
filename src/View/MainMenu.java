@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package View;
 
 import PopUp.PopUpPegawai;
@@ -15,9 +11,6 @@ import javax.swing.UIManager;
  */
 public class MainMenu extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Menu
-     */
     public MainMenu() {
         initComponents();
     }

@@ -14,32 +14,7 @@ public class PopUpKategori extends javax.swing.JFrame {
     public PopUpKategori() {
         initComponents();
         reset();
-//        loadTable();
-
     }
-
-//    void loadTable() {
-//        DefaultTableModel model = new DefaultTableModel();
-//        model.addColumn("ID");
-//        model.addColumn("Nama");
-//
-//        try {
-//            Kategori kt = new Kategori();
-//            ResultSet data = kt.tampilKategori();
-//
-//            while (data.next()) {
-//                model.addRow(new Object[]{
-//                    data.getString("id_kategori"),
-//                    data.getString("nama_kategori"),});
-//
-//            }
-//
-//        } catch (SQLException sQLException) {
-//
-//        }
-//
-//        //tblDevisi.setModel(model);
-//    }
 
     void reset() {
         autoID();
@@ -211,6 +186,12 @@ public class PopUpKategori extends javax.swing.JFrame {
 //
 //        loadTable();
         reset();
+        
+        MainMenu.pn_utama.removeAll();
+        MainMenu.pn_utama.add(new MenuKategori());
+        MainMenu.pn_utama.repaint();
+        MainMenu.pn_utama.revalidate();
+        dispose();
     }//GEN-LAST:event_btnUbahActionPerformed
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
@@ -224,6 +205,12 @@ public class PopUpKategori extends javax.swing.JFrame {
 
 //        loadTable();
         reset();
+        
+        MainMenu.pn_utama.removeAll();
+        MainMenu.pn_utama.add(new MenuKategori());
+        MainMenu.pn_utama.repaint();
+        MainMenu.pn_utama.revalidate();
+        dispose();
     }//GEN-LAST:event_btnHapusActionPerformed
 
     /**

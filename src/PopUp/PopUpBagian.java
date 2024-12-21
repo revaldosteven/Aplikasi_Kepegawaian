@@ -13,7 +13,6 @@ public class PopUpBagian extends javax.swing.JFrame {
 
     public PopUpBagian() {
         initComponents();
-//        loadTable();
         reset();
     }
 
@@ -205,11 +204,17 @@ public class PopUpBagian extends javax.swing.JFrame {
         } catch (SQLException sQLException) {
         }
 
-        loadTable();
-        reset();
+//        loadTable();
+//        reset();
 
-        loadTable();
+//        loadTable();
         reset();
+        
+        MainMenu.pn_utama.removeAll();
+        MainMenu.pn_utama.add(new MenuBagian());
+        MainMenu.pn_utama.repaint();
+        MainMenu.pn_utama.revalidate();
+        dispose();
     }//GEN-LAST:event_btnUbahActionPerformed
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
@@ -221,8 +226,14 @@ public class PopUpBagian extends javax.swing.JFrame {
         } catch (SQLException sQLException) {
         }
 
-        loadTable();
+//        loadTable();
         reset();
+        
+        MainMenu.pn_utama.removeAll();
+        MainMenu.pn_utama.add(new MenuBagian());
+        MainMenu.pn_utama.repaint();
+        MainMenu.pn_utama.revalidate();
+        dispose();
     }//GEN-LAST:event_btnHapusActionPerformed
 
     /**

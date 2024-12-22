@@ -573,7 +573,36 @@ public class PopUpPegawai extends javax.swing.JFrame {
         // Clear existing items in cbJabatan
         cbJabatan.removeAllItems();
 
-        if ("LPPM".equals(selectedBagian)) {
+        
+        if ("Sistem Informasi".equals(selectedBagian)) {
+            cbJabatan.addItem("Rektor");
+            cbJabatan.addItem("Wakil Rektor 1");
+            cbJabatan.addItem("Wakil Rektor 2");
+            cbJabatan.addItem("Wakil Rektor 3");
+            cbJabatan.addItem("Kaprodi Sistem Informasi");
+        
+        } else if ("Pendidikan Teknologi Informasi".equals(selectedBagian)) {
+            // Add items to cbJabatan for LPPM
+            cbJabatan.addItem("Rektor");
+            cbJabatan.addItem("Wakil Rektor 1");
+            cbJabatan.addItem("Wakil Rektor 2");
+            cbJabatan.addItem("Wakil Rektor 3");
+            cbJabatan.addItem("Kaprodi Pendidikan Teknologi Informasi");
+         
+        } else if ("Teknik Industri".equals(selectedBagian)) {
+            cbJabatan.addItem("Rektor");
+            cbJabatan.addItem("Wakil Rektor 1");
+            cbJabatan.addItem("Wakil Rektor 2");
+            cbJabatan.addItem("Wakil Rektor 3");
+            cbJabatan.addItem("Kaprodi Teknik Industri");
+            
+        } else if ("Program Studi".equals(selectedBagian)) {
+            cbJabatan.addItem("Rektor");
+            cbJabatan.addItem("Wakil Rektor 1");
+            cbJabatan.addItem("Wakil Rektor 2");
+            cbJabatan.addItem("Wakil Rektor 3");
+            
+        } else if ("LPPM".equals(selectedBagian)) {
             // Add items to cbJabatan for LPPM
             cbJabatan.addItem("Ketua LPPM");
             cbJabatan.addItem("Wakil Ketua LPPM");
